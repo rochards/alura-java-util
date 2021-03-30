@@ -5,3 +5,4 @@
 - ArrayList;
 - List;
 - LinkedList;
+- Vector;
