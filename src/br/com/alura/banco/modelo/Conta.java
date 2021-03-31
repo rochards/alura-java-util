@@ -6,10 +6,15 @@ public abstract class Conta {
 
     protected int agencia;
     protected int numero;
+    protected double saldo;
 
     public Conta(int agencia, int numero) {
         this.agencia = agencia;
         this.numero = numero;
+    }
+
+    public void deposita(double valor) {
+        this.saldo += valor;
     }
 
     public int getAgencia() {
@@ -18,6 +23,10 @@ public abstract class Conta {
 
     public int getNumero() {
         return numero;
+    }
+
+    public double getSaldo() {
+        return saldo;
     }
 
     @Override
@@ -38,6 +47,7 @@ public abstract class Conta {
         return "Conta{" +
                 "agencia=" + agencia +
                 ", numero=" + numero +
+                ", saldo=" + saldo +
                 '}';
     }
 }
